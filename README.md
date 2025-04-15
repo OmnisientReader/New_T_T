@@ -150,20 +150,35 @@
 
 
 restaurant_booking_api/
+
 │ ├── app/ # Исходный код FastAPI приложения
+
 │ │ ├── core/ # Конфигурация, подключение к БД
+
 │ │ ├── models/ # Модели SQLAlchemy (ORM)
+
 │ │ ├── routers/ # Обработчики API эндпоинтов
+
 │ │ ├── schemas/ # Схемы Pydantic (валидация, сериализация)
+
 │ │ ├── services/ # Бизнес-логика
+
 │ │ └── main.py # Точка входа в приложение
+
 │ ├── alembic/ # Конфигурация и скрипты Alembic
+
 │ │ └── versions/ # Файлы миграций
+
 │ ├── .env # Переменные окружения (локально)
+
 │ ├── alembic.ini # Конфигурация Alembic
+
 │ ├── docker-compose.yml # Конфигурация Docker Compose
+
 │ ├── Dockerfile # Инструкции для сборки Docker-образа приложения
+
 │ └── requirements.txt # Зависимости Python
+
 └── README.md # Этот файл
 
 
