@@ -149,49 +149,22 @@
 ## Структура Проекта
 
 
-New_T_T/
-├── restaurant_booking_api/
-│   ├── app/                     # Основная папка с кодом приложения
-│   │   ├── core/                # Ключевые модули конфигурации и подключения
-│   │   │   ├── __init__.py
-│   │   │   ├── config.py        # Управление настройками (Pydantic BaseSettings)
-│   │   │   └── database.py      # Настройка подключения к БД (SQLAlchemy async engine, session)
-│   │   ├── models/              # Модели данных SQLAlchemy (ORM)
-│   │   │   ├── __init__.py
-│   │   │   ├── base.py          # Базовый класс для моделей SQLAlchemy
-│   │   │   ├── reservation.py   # Модель Reservation
-│   │   │   └── table.py         # Модель Table
-│   │   ├── routers/             # Обработчики API эндпоинтов (маршруты)
-│   │   │   ├── __init__.py
-│   │   │   ├── reservation.py   # Роутер для /reservations
-│   │   │   └── table.py         # Роутер для /tables
-│   │   ├── schemas/             # Схемы данных Pydantic (для валидации и сериализации)
-│   │   │   ├── __init__.py
-│   │   │   ├── reservation.py   # Схемы для Reservation (Base, Create, Read)
-│   │   │   └── table.py         # Схемы для Table (Base, Create, Read)
-│   │   ├── services/            # Бизнес-логика (взаимодействие с БД)
-│   │   │   ├── __init__.py
-│   │   │   ├── reservation.py   # Функции для работы с бронированиями (CRUD, проверки)
-│   │   │   └── table.py         # Функции для работы со столиками (CRUD)
-│   │   ├── tests/
-│   │   │   ├── __init__.py
-│   │   │   ├── conftest.py
-│   │   │   ├── test_reservations.py
-│   │   │   └── test_tables.py 
-│   │   ├── __init__.py
-│   │   └── main.py              # Точка входа в приложение FastAPI, инициализация, роутеры
-│   ├── alembic/                 # Конфигурация и скрипты Alembic для миграций БД
-│   │   ├── versions/            # Сгенерированные файлы миграций
-│   │   │   └── 425ea704352f_....py # Конкретный скрипт миграции
-│   │   ├── __init__.py
-│   │   ├── env.py               # Скрипт конфигурации среды выполнения Alembic
-│   │   └── script.py.mako       # Шаблон для генерации новых файлов миграций
-│   ├── .env                     # Файл с переменными окружения
-│   ├── alembic.ini              # Конфигурационный файл Alembic
-│   ├── docker-compose.yml       # Конфигурация Docker Compose для запуска сервисов
-│   ├── Dockerfile               # Инструкции для сборки Docker-образа приложения
-│   └── requirements.txt         # Список зависимостей Python
-└── README.md                    # Описание проекта (этот файл)
+restaurant_booking_api/
+│ ├── app/ # Исходный код FastAPI приложения
+│ │ ├── core/ # Конфигурация, подключение к БД
+│ │ ├── models/ # Модели SQLAlchemy (ORM)
+│ │ ├── routers/ # Обработчики API эндпоинтов
+│ │ ├── schemas/ # Схемы Pydantic (валидация, сериализация)
+│ │ ├── services/ # Бизнес-логика
+│ │ └── main.py # Точка входа в приложение
+│ ├── alembic/ # Конфигурация и скрипты Alembic
+│ │ └── versions/ # Файлы миграций
+│ ├── .env # Переменные окружения (локально)
+│ ├── alembic.ini # Конфигурация Alembic
+│ ├── docker-compose.yml # Конфигурация Docker Compose
+│ ├── Dockerfile # Инструкции для сборки Docker-образа приложения
+│ └── requirements.txt # Зависимости Python
+└── README.md # Этот файл
 
 
 
